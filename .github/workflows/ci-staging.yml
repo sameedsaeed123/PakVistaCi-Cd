@@ -1,5 +1,4 @@
-# Author: Noor Hassan – CI Staging Pipeline
- ⁠
+# Author: Noor Hassan - CI Staging Pipeline
 name: CI - Staging
 
 on:
@@ -17,12 +16,11 @@ jobs:
       - name: Lint HTML
         run: |
           npm install -g htmlhint
-          htmlhint "*.html"
+          htmlhint --config .htmlhintrc "*.html"
 
       - name: Lint CSS
         run: |
           npm install -g stylelint stylelint-config-standard
-          echo '{"extends":["stylelint-config-standard"]}' > .stylelintrc.json
           stylelint "*.css"
 
       - name: Build with Parcel
