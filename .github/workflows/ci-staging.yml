@@ -1,3 +1,4 @@
+# Author: Noor Hassan - CI Staging Pipeline
 name: CI - Staging
 
 on:
