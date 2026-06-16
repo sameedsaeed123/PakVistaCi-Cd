@@ -3,11 +3,9 @@
   "version": "1.0.0",
   "description": "PakVista - Pakistan Tourism Static Site",
   "scripts": {
-    "build": "parcel build *.html --dist-dir dist"
+    "build": "mkdir -p dist && cp *.html dist/ && parcel build style.css --dist-dir dist"
   },
   "devDependencies": {
-    "parcel": "^2.12.0",
-    "stylelint": "^17.13.0",
-    "stylelint-config-standard": "^38.0.0"
+    "parcel": "^2.16.4"
   }
 }

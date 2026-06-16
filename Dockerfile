@@ -3,7 +3,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install --include=dev
 COPY . .
-RUN npx parcel build *.html --dist-dir dist --no-cache
+RUN mkdir -p dist && cp *.html dist/ && npx parcel build style.css --dist-dir dist --no-cache
 
 FROM nginx:alpine
 COPY --from=builder /app/dist /usr/share/nginx/html
