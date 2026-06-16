@@ -2,19 +2,19 @@
 name: CD - Production
 
 on:
-  push:
-    branches:
-      - main
+   push:
+      branches:
+         - main
 
 jobs:
-  cd-prod:
-    runs-on: ubuntu-latest
-    environment: production
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+   cd-prod:
+      runs-on: ubuntu-latest
+      environment: production
+      steps:
+         - name: Checkout code
+           uses: actions/checkout@v4
 
-      - name: Deploy to Render - Production
-        run: |
-          curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK_PROD_URL }}"
-          echo "Deployment triggered for Production environment on Render"
+         - name: Deploy to Render - Production
+           run: |
+              curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK_PROD_URL }}"
+              echo "Deployment triggered for Production environment on Render"
