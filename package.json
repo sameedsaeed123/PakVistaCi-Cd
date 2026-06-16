@@ -1,0 +1,11 @@
+{
+  "name": "pakvista",
+  "version": "1.0.0",
+  "description": "PakVista - Pakistan Tourism Static Site",
+  "scripts": {
+    "build": "parcel build index.html lahore.html hunza.html karachi.html swat.html contact.html --dist-dir dist"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
